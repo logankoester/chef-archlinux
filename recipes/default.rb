@@ -17,11 +17,10 @@ if node['platform'] == 'arch'
   # https://wiki.archlinux.org/index.php/Locale
   ruby_block 'Enable desired locales' do
     block do
-      locales = ['en_US.UTF-8 UTF-8', 'en_US ISO-8859-1']
-
+      locales = node[:archlinux][:locales]
       lg = Chef::Util::FileEdit.new('/etc/locale.gen')
       locales.each do |locale|
-        lg.search_file_replace_line(/^##{locale}$/, locale)
+        lg.search_file_replace_line(/^##{Regexp.escape(locale)}/, locale)
       end
       lg.write_file
     end
