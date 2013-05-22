@@ -13,3 +13,11 @@ if node['platform'] == 'arch'
     to '/usr/bin/systemctl'
   end
 end
+
+execute 'Generate locales' do
+  command 'locale-gen'
+end
+
+execute 'Set system-wide locale' do
+  command 'localectl set-locale LANG="en_US.UTF-8"'
+end
