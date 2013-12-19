@@ -9,11 +9,6 @@
 
 if node['platform'] =~ /arch|manjaro/
 
-  # Chef's SystemD provider is hardcoded to /bin, which is incorrect on Arch Linux.
-  link '/bin/systemctl' do
-    to '/usr/bin/systemctl'
-  end
-
   # https://wiki.archlinux.org/index.php/Locale
   ruby_block 'Enable desired locales' do
     block do
