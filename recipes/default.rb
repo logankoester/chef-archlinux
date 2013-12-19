@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-if node['platform'] == 'arch'
+if node['platform'] =~ /arch|manjaro/
 
   # Chef's SystemD provider is hardcoded to /bin, which is incorrect on Arch Linux.
   link '/bin/systemctl' do
