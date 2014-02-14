@@ -29,4 +29,9 @@ if node['platform'] =~ /arch|manjaro/
     command 'localectl set-locale LANG="en_US.UTF-8"'
   end
 
+  execute 'Optimize makepkg' do
+    flags = node[:archlinux]['MAKEFLAGS']
+    command "sed -i 's/^#MAKEFLAGS=\"-j2\"/MAKEFLAGS=\"#{flags}\"/g' /etc/makepkg.conf"
+  end
+
 end
