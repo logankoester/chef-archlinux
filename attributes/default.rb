@@ -5,3 +5,8 @@ default[:archlinux][:locales] = [
 
 # Number of cores to use when compiling packages with makepkg
 default[:archlinux]['MAKEFLAGS'] = '-j2'
+
+# Default attributes for updatedb job
+default[:updatedb][:hour] = '0'
+default[:updatedb][:minute] = '0'
+default[:updatedb][:mailto] = 'root@localhost'

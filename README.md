@@ -12,9 +12,58 @@ cookbook 'archlinux'
 
 Then run `berks` to install it.
 
-## Usage
+
+## default recipe
+
+  * Generates & enables the desired locales
+  * Optimizes makepkg build flags
+
+### Usage
 
 Add `recipe[archlinux::default]` to your run list.
+
+## utilities recipe
+
+Installs some commonly desired system packages. 
+
+### Usage
+
+Add `recipe[archlinux::utilities]` to your run list.
+
+## pacaur recipe
+
+Installs `cower` and its `pacaur` frontend for convenient interaction
+with AUR.
+
+### Usage
+
+Add `recipe[archlinux::pacaur]` to your run list.
+
+
+## mlocate recipe
+
+Installs cronie and mlocate, then enables the cronie service and
+schedules an updatedb job for `mlocate` every hour.
+
+### Usage
+
+Add `recipe[archlinux::mlocate]` to your run list.
+
+## aufs_friendly recipe
+
+> This recipe is highly experimental and should be treated with caution.
+
+Installs the aufs-compatible linux kernel and modules.
+
+See https://aur.archlinux.org/packages/linux-aufs_friendly/
+
+### Usage
+
+Run `recipe[archlinux::aufs_friendly]` manually, then reboot.
+
+### Attributes
+
+See `attributes/default.rb` for examples.
 
 ### Services
 
