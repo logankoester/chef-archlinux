@@ -1,0 +1,11 @@
+[Unit]
+Description=Yearly Timer
+
+[Timer]
+OnBootSec=90min
+OnCalendar=yearly
+Persistent=true
+Unit=timer-yearly.target
+
+[Install]
+WantedBy=basic.target
