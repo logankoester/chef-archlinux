@@ -15,3 +15,4 @@ package('strace') { action :install }
 package('the_silver_searcher') { action :install }
 package('gvim') { action :install }
 package('vim-systemd') { action :install }
+package('tmux') { action :install }
