@@ -39,15 +39,24 @@ with AUR.
 
 Add `recipe[archlinux::pacaur]` to your run list.
 
-
 ## mlocate recipe
 
-Installs cronie and mlocate, then enables the cronie service and
-schedules an updatedb job for `mlocate` every hour.
+Installs mlocate and schedules an updatedb job for `mlocate` every hour
+via cron.
 
 ### Usage
 
 Add `recipe[archlinux::mlocate]` to your run list.
+
+## cron recipe
+
+Installs both cronie and systemd cron functionality.
+
+See https://wiki.archlinux.org/index.php/Systemd/cron_functionality
+
+### Usage
+
+Add `recipe[archlinux::cron]` to your run list.
 
 ## aufs_friendly recipe
 

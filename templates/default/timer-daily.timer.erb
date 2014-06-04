@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily Timer
+
+[Timer]
+OnBootSec=10min
+OnCalendar=daily
+Persistent=true
+Unit=timer-daily.target
+
+[Install]
+WantedBy=basic.target
