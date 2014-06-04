@@ -1,6 +1,6 @@
-# Gibson archlinux
+# archlinux cookbook
 
-Chef makes a lot of outdated assumptions about the Arch Linux platform. This cookbook corrects those assumptions.
+Recipes to manage core system properties for Arch Linux
 
 ## Installation
 
