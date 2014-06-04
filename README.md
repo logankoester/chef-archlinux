@@ -39,6 +39,7 @@ with AUR.
 
 Add `recipe[archlinux::pacaur]` to your run list.
 
+
 ## mlocate recipe
 
 Installs mlocate and schedules an updatedb job for `mlocate` every hour
