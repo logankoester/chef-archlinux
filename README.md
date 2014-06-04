@@ -7,7 +7,7 @@ Recipes to manage core system properties for Arch Linux
 Using [Berkshelf](http://berkshelf.com/), add the archlinux cookbook to your Berksfile.
 
 ```ruby
-cookbook 'archlinux', git: 'git@git.ldk.io:logankoester/gibson.git', rel: 'cookbooks/archlinux', branch: 'master'
+cookbook 'archlinux'
 ```
 
 Then run `berks` to install it.
