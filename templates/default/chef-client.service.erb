@@ -1,0 +1,13 @@
+[Unit]
+Description=Runs chef-client hourly to converge the node
+Wants=timer-hourly.timer
+
+[Service]
+User=root
+Nice=19
+IOSchedulingClass=2
+IOSchedulingPriority=7
+ExecStart=/usr/bin/chef-client
+
+[Install]
+WantedBy=timer-hourly.target

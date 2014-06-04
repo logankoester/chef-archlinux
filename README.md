@@ -71,11 +71,20 @@ See https://aur.archlinux.org/packages/linux-aufs_friendly/
 
 Run `recipe[archlinux::aufs_friendly]` manually, then reboot.
 
-### Attributes
+## chef recipe
+
+Create, enable and start a systemd service that runs chef-client hourly to
+converge the node.
+
+### Usage
+
+Add `recipe[archlinux::chef]` to your run list.
+
+## Attributes
 
 See `attributes/default.rb` for examples.
 
-### Services
+## Services
 
 Chef tries to use rc.d when it detects Arch. Chef comes with a SystemD service provider. For each service, specify it like so:
 
