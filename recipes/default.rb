@@ -1,12 +1,3 @@
-#
-# Cookbook Name:: archlinux
-# Recipe:: default
-#
-# Copyright (C) 2013 Logan Koester
-# 
-# All rights reserved - Do Not Redistribute
-#
-
 if node['platform'] =~ /arch|manjaro/
 
   # https://wiki.archlinux.org/index.php/Locale

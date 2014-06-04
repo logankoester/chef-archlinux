@@ -1,12 +1,3 @@
-#
-# Cookbook Name:: archlinux
-# Recipe:: aufs_friendly
-#
-# Copyright (C) 2013 Logan Koester
-# 
-# All rights reserved - Do Not Redistribute
-#
-
 include_recipe 'pacman'
 
 %w{ abs grub xmlto docbook-xsl bc }.each do |pkg|
