@@ -13,6 +13,7 @@ package('rxvt-unicode-terminfo') { action :install }
 package('rsync') { action :install }
 package('strace') { action :install }
 package('the_silver_searcher') { action :install }
+package('vim') { action :remove }
 package('gvim') { action :install }
 package('vim-systemd') { action :install }
 package('tmux') { action :install }
