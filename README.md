@@ -80,6 +80,14 @@ converge the node.
 
 Add `recipe[archlinux::chef]` to your run list.
 
+## hostname recipe
+
+Sets the hostname and creates an /etc/hosts entry from `node['machinename']`.
+
+### Usage
+
+Add `recipe[archlinux::hostname]` to your run list.
+
 ## Attributes
 
 See `attributes/default.rb` for examples.
