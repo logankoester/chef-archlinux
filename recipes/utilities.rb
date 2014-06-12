@@ -19,3 +19,4 @@ package('vim-systemd') { action :install }
 package('tmux') { action :install }
 package('autojump') { action :install }
 package('pkgfile') { action :install }
+package('libxslt') { action :install }
