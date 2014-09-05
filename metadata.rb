@@ -4,7 +4,7 @@ maintainer_email 'logan@logankoester.com'
 license          'MIT'
 description      'Recipes to manage core system properties for Arch Linux'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.2.1'
+version          '0.3.0'
 
 depends 'pacman'
 depends 'hostsfile'

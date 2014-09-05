@@ -1,0 +1,8 @@
+[Match]
+Name=<%= @name %>
+
+[Network]
+<% @addresses.each do |address| %>
+Address=<%= address %>
+<% end %>
+Gateway=<%= @gateway %>
