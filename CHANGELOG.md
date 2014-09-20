@@ -2,6 +2,9 @@ CHANGELOG
 =========
 
 ### v0.3.1
+- Fixes a simple mistake in the fix_chef_uid recipe pasted from the Chef blog
+
+### v0.3.1
 - Adds fix_chef_uid recipe.
 
 ### v0.3.0

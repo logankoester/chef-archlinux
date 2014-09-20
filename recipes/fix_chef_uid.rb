@@ -4,5 +4,5 @@
 
 execute 'fix_chef_uid' do
   command 'chown -Rh 0:0 /opt/chef'
-  not_if (File.stat('/opt/chef/bin').uid == 0)
+  not_if { (File.stat('/opt/chef/bin').uid == 0) }
 end
