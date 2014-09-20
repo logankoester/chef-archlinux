@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+### v0.3.1
+- Adds fix_chef_uid recipe.
+
 ### v0.3.0
 - Adds static_network recipe
 
