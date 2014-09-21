@@ -1,6 +1,8 @@
 # Arch Linux cookbook
-
 > [Chef](http://getchef.com/) recipes to manage core system properties for [Arch Linux](http://archlinux.org).
+
+[![Build Status](http://ci.ldk.io/logankoester/chef-archlinux/badge)](http://ci.ldk.io/logankoester/chef-archlinux/)
+[![Gittip](http://img.shields.io/gittip/logankoester.png)](https://www.gittip.com/logankoester/)
 
 ## Installation
 
