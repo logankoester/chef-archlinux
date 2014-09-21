@@ -3,6 +3,8 @@ default['archlinux']['locales'] = [
   'en_US ISO-8859-1'
 ]
 
+default['archlinux']['system_locale'] = 'en_US.UTF-8'
+
 # Number of cores to use when compiling packages with makepkg
 default['archlinux']['MAKEFLAGS'] = '-j2'
 

@@ -16,5 +16,6 @@ execute 'Generate locales' do
 end
 
 execute 'Set system-wide locale' do
-  command 'localectl set-locale LANG="en_US.UTF-8"'
+  system_locale = node['archlinux']['system_locale']
+  command "localectl set-locale LANG=\"#{system_locale}\""
 end
