@@ -3,7 +3,7 @@ if node['platform'] =~ /arch|manjaro/
   # https://wiki.archlinux.org/index.php/Locale
   ruby_block 'Enable desired locales' do
     block do
-      locales = node[:archlinux][:locales]
+      locales = node['archlinux']['locales']
       lg = Chef::Util::FileEdit.new('/etc/locale.gen')
       locales.each do |locale|
         lg.search_file_replace_line(/^##{Regexp.escape(locale)}/, locale)
@@ -21,7 +21,7 @@ if node['platform'] =~ /arch|manjaro/
   end
 
   execute 'Optimize makepkg' do
-    flags = node[:archlinux]['MAKEFLAGS']
+    flags = node['archlinux']['MAKEFLAGS']
     command "sed -i 's/^#MAKEFLAGS=\"-j2\"/MAKEFLAGS=\"#{flags}\"/g' /etc/makepkg.conf"
   end
 

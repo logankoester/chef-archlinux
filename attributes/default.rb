@@ -1,12 +1,12 @@
-default[:archlinux][:locales] = [
+default['archlinux']['locales'] = [
   'en_US.UTF-8 UTF-8',
   'en_US ISO-8859-1'
 ]
 
 # Number of cores to use when compiling packages with makepkg
-default[:archlinux]['MAKEFLAGS'] = '-j2'
+default['archlinux']['MAKEFLAGS'] = '-j2'
 
 # Default attributes for updatedb job
-default[:updatedb][:hour] = '0'
-default[:updatedb][:minute] = '0'
-default[:updatedb][:mailto] = 'root@localhost'
+default['updatedb']['hour'] = '0'
+default['updatedb']['minute'] = '0'
+default['updatedb']['mailto'] = 'root@localhost'
