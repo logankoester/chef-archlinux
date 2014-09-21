@@ -57,18 +57,6 @@ See https://wiki.archlinux.org/index.php/Systemd/cron_functionality
 
 Add `recipe[archlinux::cron]` to your run list.
 
-## aufs_friendly recipe
-
-> This recipe is highly experimental and should be treated with caution.
-
-Installs the aufs-compatible linux kernel and modules.
-
-See https://aur.archlinux.org/packages/linux-aufs_friendly/
-
-### Usage
-
-Run `recipe[archlinux::aufs_friendly]` manually, then reboot.
-
 ## chef recipe
 
 Create, enable and start a systemd service that runs chef-client hourly to
