@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### v0.4.1
+
+- Locales updates
+
 ### v0.4.0
 
 - Big clean up. Update carefully!
