@@ -13,82 +13,59 @@ cookbook 'archlinux', github: 'logankoester/chef-archlinux', branch: 'master'
 ```
 Then run `berks` to install it.
 
-## default recipe
+## Usage
 
-  * Generates & enables the desired locales
-  * Optimizes makepkg build flags
-
-### Usage
-
-Add `recipe[archlinux::default]` to your run list.
-
-## utilities recipe
-
-Installs some commonly desired system packages. 
-
-### Usage
-
-Add `recipe[archlinux::utilities]` to your run list.
-
-## pacaur recipe
-
-Installs `cower` and its `pacaur` frontend for convenient interaction
-with AUR.
-
-### Usage
-
-Add `recipe[archlinux::pacaur]` to your run list.
-
-
-## mlocate recipe
-
-Installs mlocate and schedules an updatedb job for `mlocate` every hour
-via cron.
-
-### Usage
-
-Add `recipe[archlinux::mlocate]` to your run list.
-
-## cron recipe
-
-Installs both cronie and systemd cron functionality.
-
-See https://wiki.archlinux.org/index.php/Systemd/cron_functionality
-
-### Usage
-
-Add `recipe[archlinux::cron]` to your run list.
-
-## chef recipe
-
-Create, enable and start a systemd service that runs chef-client hourly to
-converge the node.
-
-### Usage
-
-Add `recipe[archlinux::chef]` to your run list.
-
-## hostname recipe
-
-Sets the hostname and creates an /etc/hosts entry from `node['machinename']`.
-
-### Usage
-
-Add `recipe[archlinux::hostname]` to your run list.
+Set the required attributes, and add the recipes you desire to your run list. For most cases,
+you can use the default recipe that includes everything.
 
 ## Attributes
 
-See `attributes/default.rb` for examples.
+See `attributes/default.rb` for details
 
-## Services
+## Recipes
 
-Chef tries to use rc.d when it detects Arch. Chef comes with a SystemD service provider. For each service, specify it like so:
 
-```ruby
-service 'YOUR_SERVICE' do
-  provider Chef::Provider::Service::Systemd if node['platform'] == 'arch'
-end
-```
+  * Optimizes makepkg build flags
+
+### chef
+
+Schedules the chef-client to run once an hour.
+
+### cron
+
+Configures both [cronie](https://wiki.archlinux.org/index.php/cron) and [systemd timers](https://wiki.archlinux.org/index.php/Systemd/cron_functionality)
+
+### default
+
+Everything.
+
+### fix_chef_uid
+
+Fix a [Chef Client vulnerability](https://www.getchef.com/blog/2014/09/19/security-releases-chef-client-and-related-products-insecure-file-ownership/) announced September 19 2014.
+
+### hostname
+
+Sets the machine hostname and creates an associated hostsfile entry.
+
+### locale
+
+Generates & enables the desired locales.
+
+### makeflags
+
+Set your MAKEFLAGS to optimize makepkg.
+
+### mlocate
+
+Installs [mlocate](https://wiki.archlinux.org/index.php/Mlocate) and schedules index updates.
+
+### pacaur
+
+Installs `cower` and its `pacaur` frontend for convenient interaction with AUR.
+
+### packages
+
+Add and remove system packages from a list.
 
 ## Author
 
