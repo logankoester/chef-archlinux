@@ -10,3 +10,31 @@ default['archlinux']['MAKEFLAGS'] = '-j2'
 default['updatedb']['hour'] = '0'
 default['updatedb']['minute'] = '0'
 default['updatedb']['mailto'] = 'root@localhost'
+
+# Default packages to install
+default['archlinux']['packages']['install'] = [
+  'iotop',
+  'tree',
+  'htop',
+  'ncdu',
+  'jnettop',
+  'ranger',
+  'nmap',
+  'expect',
+  'multitail',
+  'dnsutils',
+  'nethogs',
+  'rxvt-unicode-terminfo',
+  'rsync',
+  'strace',
+  'the_silver_searcher',
+  'gvim',
+  'vim-systemd',
+  'tmux',
+  'autojump',
+  'pkgfile',
+  'libxslt'
+]
+
+# Default packages to remove
+default['archlinux']['packages']['remove'] = ['vim']
