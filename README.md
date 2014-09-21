@@ -1,17 +1,15 @@
-# archlinux cookbook
+# Arch Linux cookbook
 
-Recipes to manage core system properties for Arch Linux
+> [Chef](http://getchef.com/) recipes to manage core system properties for [Arch Linux](http://archlinux.org).
 
 ## Installation
 
-Using [Berkshelf](http://berkshelf.com/), add the archlinux cookbook to your Berksfile.
+Using [Berkshelf](http://berkshelf.com/), add the `archlinux` cookbook to your Berksfile.
 
 ```ruby
-cookbook 'archlinux'
+cookbook 'archlinux', github: 'logankoester/chef-archlinux', branch: 'master'
 ```
-
 Then run `berks` to install it.
-
 
 ## default recipe
 
@@ -104,4 +102,4 @@ end
 
 ## Author
 
-Author:: Logan Koester (<logan@logankoester.com>)
+Copyright (c) 2014 [Logan Koester](http://logankoester.com). Released under the MIT license. See `LICENSE` for details.
