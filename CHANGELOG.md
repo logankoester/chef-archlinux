@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### v0.4.0
+
+- Big clean up. Update carefully!
+
 ### v0.3.1
 - Fixes a simple mistake in the fix_chef_uid recipe pasted from the Chef blog
 
