@@ -6,7 +6,7 @@ describe 'archlinux::packages' do
     end
   end
 
-  let(:chef_run) do
+  cached(:chef_run) do
     ChefSpec::Runner.new do |node|
       node.set['archlinux']['packages']['install'] = ['foo-package']
       node.set['archlinux']['packages']['remove'] = ['bar-package']
