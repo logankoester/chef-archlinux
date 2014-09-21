@@ -8,3 +8,5 @@ version          '0.4.0'
 
 depends 'pacman'
 depends 'hostsfile'
+
+supports 'arch'
