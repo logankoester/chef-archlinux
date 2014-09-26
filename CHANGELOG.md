@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### v0.5.0
+
+- Adds journald.conf template and associated recipe
+
 ### v0.4.1
 
 - Locales updates
