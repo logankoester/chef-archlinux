@@ -40,3 +40,18 @@ default['archlinux']['packages']['install'] = [
 
 # Default packages to remove
 default['archlinux']['packages']['remove'] = ['vim']
+
+# Default journald.conf options
+default['archlinux']['journald']['storage'] = 'auto'
+default['archlinux']['journald']['compress'] = 'yes'
+default['archlinux']['journald']['seal'] = 'yes'
+default['archlinux']['journald']['split_mode'] = 'uid'
+default['archlinux']['journald']['sync_interval_sec'] = '5m'
+default['archlinux']['journald']['rate_limit_interval'] = '30s'
+default['archlinux']['journald']['rate_limit_burst'] = 1000
+default['archlinux']['journald']['max_file_sec'] = '1month'
+default['archlinux']['journald']['forward_to_syslog'] = 'no'
+default['archlinux']['journald']['forward_to_kmsg'] = 'no'
+default['archlinux']['journald']['forward_to_console'] = 'no'
+default['archlinux']['journald']['forward_to_wall'] = 'yes'
+default['archlinux']['journald']['tty_path'] = '/dev/console'
