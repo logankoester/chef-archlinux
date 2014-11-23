@@ -4,7 +4,7 @@ maintainer_email 'logan@logankoester.com'
 license          'MIT'
 description      'Recipes to manage core system properties for Arch Linux'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.5.0'
+version          IO.read(File.join(File.dirname(__FILE__), 'VERSION')) rescue '0.1.0'
 supports 'arch'
 
 depends 'pacman'
