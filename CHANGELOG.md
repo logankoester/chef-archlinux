@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### v0.5.2
+
+- Removes fix_chef_uid recipe (outdated)
+
 ### v0.5.0
 
 - Adds journald.conf template and associated recipe
