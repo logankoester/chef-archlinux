@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### v0.5.2
+### v0.6.0
 
 - Removes fix_chef_uid recipe (outdated)
 
