@@ -73,7 +73,7 @@ Add and remove system packages from a list.
 
 ### ruby_shadow
 
-Install ruby-shadow from AUR. This is an optional dependency of the [user resource](https://docs.chef.io/resource_user.html).
+Install ruby-shadow with [chef_gem](https://docs.chef.io/resource_chef_gem.html). This is an optional dependency of the [user resource](https://docs.chef.io/resource_user.html).
 
 ## Author
 
