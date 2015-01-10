@@ -71,6 +71,10 @@ Installs `cower` and its `pacaur` frontend for convenient interaction with AUR.
 
 Add and remove system packages from a list.
 
+### ruby_shadow
+
+Install ruby-shadow from AUR. This is an optional dependency of the [user resource](https://docs.chef.io/resource_user.html).
+
 ## Author
 
 Copyright (c) 2014-2015 [Logan Koester](http://logankoester.com). Released under the MIT license. See `LICENSE` for details.
