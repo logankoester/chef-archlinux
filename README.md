@@ -39,9 +39,17 @@ Configures both [cronie](https://wiki.archlinux.org/index.php/cron) and [systemd
 
 Everything.
 
+### haveged
+
+A daemon that generates system entropy
+
 ### hostname
 
 Sets the machine hostname and creates an associated hostsfile entry.
+
+### keyring
+
+Generate a fresh pacman keyring.
 
 ### locale
 

@@ -17,7 +17,7 @@ describe 'archlinux::packages' do
     expect(chef_run).to install_package('foo-package')
   end
 
-  it 'remotes packages from node attribute' do
+  it 'removes packages from node attribute' do
     expect(chef_run).to remove_package('bar-package')
   end
 end
