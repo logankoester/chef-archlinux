@@ -104,7 +104,7 @@ Server = http://ldk.io/repo/
 <% node['archlinux']['pacman']['repositories'].each do |repo| %>
 
 [<%= repo.name %>]
-SigLevel = <%= repo.sig_level %>
+<% if repo.sig_level %>SigLevel = <%= repo.sig_level %><% end %>
 Server = <%= repo.server %>
 
 <% end %>
