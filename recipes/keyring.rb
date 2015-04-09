@@ -6,13 +6,19 @@ bash 'Generate a fresh pacman keyring' do
     touch /etc/pacman.d/gnupg/.chef-regenerate
   EOH
   not_if { ::File.exists?('/etc/pacman.d/gnupg/.chef-regenerate') }
+  notifies :run, 'ruby_block[sign_keys]', :immediately
 end
 
-node['archlinux']['pacman-keys'].each do |key_id|
-  bash 'Sign unofficial developer keys' do
-    code <<-EOH
-      pacman-key -r #{key_id}
-      pacman-key --lsign #{key_id}
-    EOH
+ruby_block "sign_keys" do
+  action :none
+  block do
+    node['archlinux']['pacman-keys'].each do |key_id|
+      bash 'Sign unofficial developer keys' do
+        code <<-EOH
+          pacman-key -r #{key_id}
+          pacman-key --lsign #{key_id}
+        EOH
+      end
+    end
   end
 end
