@@ -10,7 +10,7 @@ bash 'Generate a fresh pacman keyring' do
 end
 
 ruby_block "sign_keys" do
-  action :none
+  action :nothing
   block do
     node['archlinux']['pacman-keys'].each do |key_id|
       bash 'Sign unofficial developer keys' do
