@@ -57,3 +57,4 @@ default['archlinux']['journald']['forward_to_wall'] = 'yes'
 default['archlinux']['journald']['tty_path'] = '/dev/console'
 
 default['archlinux']['pacman-keys'] = []
+default['archlinux']['pacman'] = { 'repositories': [] }

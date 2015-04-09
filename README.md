@@ -65,6 +65,25 @@ Set your MAKEFLAGS to optimize makepkg.
 
 Installs [mlocate](https://wiki.archlinux.org/index.php/Mlocate) and schedules index updates.
 
+### pacman
+
+Writes `/etc/pacman.conf` from a template. You may add extra repositories like
+this:
+
+```json
+"archlinux": {
+  "pacman": {
+    "repositories": [
+      {
+        "name": "myrepo",
+        "sig_level": "Optional TrustAll",
+        "server": "http://myrepo.example"
+      }
+    ]
+  }
+}
+```
+
 ### pacaur
 
 Installs `cower` and its `pacaur` frontend for convenient interaction with AUR.
