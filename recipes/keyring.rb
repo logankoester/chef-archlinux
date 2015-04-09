@@ -4,6 +4,7 @@ bash 'Generate a fresh pacman keyring' do
     pacman-key --init
     pacman-key --populate archlinux
     touch /etc/pacman.d/gnupg/.chef-regenerate
+    dirmngr </dev/null
   EOH
   not_if { ::File.exists?('/etc/pacman.d/gnupg/.chef-regenerate') }
   notifies :run, 'ruby_block[sign_keys]', :immediately
