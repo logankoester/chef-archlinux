@@ -98,13 +98,9 @@ Include = /etc/pacman.d/mirrorlist
 #SigLevel = Optional TrustAll
 #Server = file:///home/custompkgs
 
-[ldk]
-Server = http://ldk.io/repo/
-
 <% node['archlinux']['pacman']['repositories'].each do |repo| %>
-
 [<%= repo.name %>]
-<% if repo.sig_level %>SigLevel = <%= repo.sig_level %><% end %>
+<% if repo.has_key? :sig_level %>SigLevel = <%= repo.sig_level %><% end %>
 Server = <%= repo.server %>
 
 <% end %>
