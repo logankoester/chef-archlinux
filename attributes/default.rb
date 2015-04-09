@@ -55,3 +55,5 @@ default['archlinux']['journald']['forward_to_kmsg'] = 'no'
 default['archlinux']['journald']['forward_to_console'] = 'no'
 default['archlinux']['journald']['forward_to_wall'] = 'yes'
 default['archlinux']['journald']['tty_path'] = '/dev/console'
+
+default['archlinux']['pacman-keys'] = []

@@ -51,6 +51,8 @@ Sets the machine hostname and creates an associated hostsfile entry.
 
 Generate a fresh pacman keyring.
 
+Additionally, you may add unofficial developer keys to the array attribute `node['archlinux']['pacman-keys']`. Each value should be the `keyid` for a key that has been published to a keyserver. Each key will be imported and locally signed so that pacman can install packages signed with these keys.
+
 ### locale
 
 Generates & enables the desired locales.
