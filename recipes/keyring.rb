@@ -10,16 +10,13 @@ bash 'Generate a fresh pacman keyring' do
   notifies :run, 'ruby_block[sign_keys]', :immediately
 end
 
-ruby_block "sign_keys" do
+ruby_block 'sign_keys' do
   action :nothing
   block do
     node['archlinux']['pacman-keys'].each do |key_id|
-      bash 'Sign unofficial developer keys' do
-        code <<-EOH
-          pacman-key -r #{key_id}
-          pacman-key --lsign #{key_id}
-        EOH
-      end
+      Mixlib::ShellOut.new("pacman-key -r #{key_id};
+        pacman-key --lsign #{key_id}").run_command
     end
+    Mixlib::ShellOut.new("pacman -Sy").run_command
   end
 end
