@@ -24,7 +24,7 @@ default['archlinux']['packages']['install'] = [
   'nmap',
   'expect',
   'multitail',
-  'dnsutils',
+  'bind-tools',
   'nethogs',
   'rxvt-unicode-terminfo',
   'rsync',
