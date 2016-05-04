@@ -7,7 +7,7 @@ describe 'archlinux::haveged' do
   end
 
   cached(:chef_run) do
-    ChefSpec::Runner.new.converge(described_recipe)
+    ChefSpec::SoloRunner.new.converge(described_recipe)
   end
 
   it 'installs the haveged package' do

@@ -7,7 +7,7 @@ describe 'archlinux::journald' do
   end
 
   cached(:chef_run) do
-    ChefSpec::Runner.new do |node|
+    ChefSpec::SoloRunner.new do |node|
       node.set['archlinux']['journald'] = {
         storage: 'chefspec'
       }

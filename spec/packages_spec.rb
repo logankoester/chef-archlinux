@@ -7,7 +7,7 @@ describe 'archlinux::packages' do
   end
 
   cached(:chef_run) do
-    ChefSpec::Runner.new do |node|
+    ChefSpec::SoloRunner.new do |node|
       node.set['archlinux']['packages']['install'] = ['foo-package']
       node.set['archlinux']['packages']['remove'] = ['bar-package']
     end.converge(described_recipe)
