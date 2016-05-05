@@ -98,4 +98,4 @@ Install ruby-shadow with [chef_gem](https://docs.chef.io/resource_chef_gem.html)
 
 ## Author
 
-Copyright (c) 2014-2015 [Logan Koester](http://logankoester.com). Released under the MIT license. See `LICENSE` for details.
+Copyright (c) 2014-2016 [Logan Koester](http://logankoester.com). Released under the MIT license. See `LICENSE` for details.
