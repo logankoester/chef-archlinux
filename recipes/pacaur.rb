@@ -3,6 +3,8 @@ package('perl') { action :install }
 package('expac') { action :install }
 package('yajl') { action :install }
 
+ENV['PATH'] = "#{ENV['PATH']}:/usr/bin/core_perl"
+
 pacman_aur 'cower' do
   skippgpcheck true
   action [:build, :install]
