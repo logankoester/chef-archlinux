@@ -16,6 +16,13 @@ link '/etc/systemd/network/10-dhcp.network' do
   end
 end
 
+link '/etc/udev/rules.d/80-net-setup-link.rules' do
+  to '/dev/null'
+  only_if do
+    node['archlinux']['disable_predictable_network_interface_names']
+  end
+end
+
 template '/etc/systemd/network/50-static.network' do
   mode '0644'
   source '50-static.network.erb'
