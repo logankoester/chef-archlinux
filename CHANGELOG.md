@@ -3,6 +3,10 @@ CHANGELOG
 
 ### 0.9.4
 
+- Disable predictable network interface names
+
+### 0.9.4
+
 - The pacaur recipe must ensure git (a dependency of pacaur) is installed, otherwise pacman will attempt to install it, which fails because user 'nobody' is not a sudoer.
 
 ### 0.9.3
