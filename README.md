@@ -1,12 +1,12 @@
 # Arch Linux cookbook
-> [Chef](http://getchef.com/) recipes to manage core system properties for [Arch Linux](http://archlinux.org).
+> [Chef](https://chef.io/) recipes to manage core system properties for [Arch Linux](http://archlinux.org).
 
 [![Build Status](http://ci.ldk.io/logankoester/chef-archlinux/badge)](http://ci.ldk.io/logankoester/chef-archlinux/)
-[![Gittip](http://img.shields.io/gittip/logankoester.png)](https://www.gittip.com/logankoester/)
+[![Gittip](http://img.shields.io/gittip/logankoester.svg)](https://www.gittip.com/logankoester/)
 
 ## Installation
 
-Using [Berkshelf](http://berkshelf.com/), add the `archlinux` cookbook to your Berksfile.
+Using [Berkshelf](https://www.github.com/berkshelf), add the `archlinux` cookbook to your Berksfile.
 
 ```ruby
 cookbook 'archlinux', github: 'logankoester/chef-archlinux', branch: 'master'
