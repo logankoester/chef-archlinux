@@ -10,6 +10,7 @@ version '0.9.7'
 supports 'arch'
 
 depends 'pacman'
+depends 'users'
 depends 'hostsfile'
 
 attribute 'archlinux/locales',
