@@ -6,7 +6,7 @@ description      'Recipes to manage core system properties for Arch Linux'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 source_url 'https://github.com/logankoester/chef-archlinux'
 issues_url 'https://github.com/logankoester/chef-archlinux/issues'
-version '0.9.6'
+version '0.9.7'
 supports 'arch'
 
 depends 'pacman'
