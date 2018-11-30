@@ -30,7 +30,7 @@ default['archlinux']['packages']['install'] = [
   'rsync',
   'strace',
   'the_silver_searcher',
-  'gvim',
+  'vim',
   'tmux',
   'autojump',
   'pkgfile',
@@ -38,7 +38,7 @@ default['archlinux']['packages']['install'] = [
 ]
 
 # Default packages to remove
-default['archlinux']['packages']['remove'] = ['vim']
+default['archlinux']['packages']['remove'] = []
 
 # Default journald.conf options
 default['archlinux']['journald']['storage'] = 'auto'
