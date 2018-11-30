@@ -31,7 +31,6 @@ default['archlinux']['packages']['install'] = [
   'strace',
   'the_silver_searcher',
   'gvim',
-  'vim-systemd',
   'tmux',
   'autojump',
   'pkgfile',
